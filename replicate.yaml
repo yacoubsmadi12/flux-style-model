@@ -1,0 +1,16 @@
+# تعريف النموذج لواجهة Replicate
+name: flux-style-model
+version: "1.0"
+
+predict: predict.py:predict
+
+inputs:
+  - name: image
+    type: image
+  - name: prompt
+    type: string
+    default: "Cartoonify this image"
+
+outputs:
+  - name: output
+    type: image
